@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Caveat:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@400;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "PT Serif", "Georgia", serif;
+  --font-handwritten: "Caveat", cursive;
+  --font-mono: "Courier New", monospace;
+  --font-casual: "Nunito", sans-serif;
+
+  --color-shine-black: #010101;
+  --color-shine-gold: #CFA012;
+  --color-shine-tan: #D8CF93;
+  --color-shine-cream: #F5F0E8;
+  --color-shine-olive: #C8CC7A;
+  --color-shine-gray: #7B7B7B;
+  --color-shine-white: #FFFFFF;
+  --color-shine-dark: #1A1714;
+  --color-shine-lgold: #FBF3E0;
+  --color-shine-red: #8B0000;
+  --color-shine-blue: #185FA5;
+}
+
+:root {
+  --shine-black: #010101;
+  --shine-gold: #CFA012;
+  --shine-tan: #D8CF93;
+  --shine-cream: #F5F0E8;
+  --shine-olive: #C8CC7A;
+  --shine-gray: #7B7B7B;
+  --shine-white: #FFFFFF;
+  --shine-dark: #1A1714;
+  --shine-lgold: #FBF3E0;
+  --shine-red: #8B0000;
+  --shine-blue: #185FA5;
+}
+
+body {
+  @apply bg-[#0F0E0D] text-white font-sans;
+}
+
+@layer utilities {
+  .shine-card {
+    @apply bg-shine-dark border border-white/5 rounded-xl hover:border-shine-gold/30 transition-all duration-300;
+  }
+  .shine-btn-primary {
+    @apply bg-shine-gold text-shine-black font-extrabold px-6 py-3 rounded-lg hover:bg-shine-gold/90 active:scale-95 transition-all;
+  }
+  .shine-btn-secondary {
+    @apply border border-shine-gold/50 text-shine-gold font-bold px-6 py-3 rounded-lg hover:bg-shine-gold/10 active:scale-95 transition-all;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0E0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2520;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CFA012;
+}
